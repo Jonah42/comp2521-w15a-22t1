@@ -1,0 +1,4 @@
+Argc is 3
+Arg 1 is: command_line
+Arg 2 is: John Shepherd,
+Arg 3 is: 88
