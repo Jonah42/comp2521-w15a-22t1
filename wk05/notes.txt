@@ -1,0 +1,12 @@
+for a node t
+
+1. if left subtree is heavier and we inserted to the left of t->left:
+	rotate t to the right
+2. if left subtree is heavier and we inserted to the right of t->left:
+	rotate t->left to the left
+	rotate t to the right
+3. if right subtree is heavier and weinserted to the right of t->right:
+	rotate t to the left
+4. if right subtree is heavier and we inserted to the left of t->right:
+	rotate t->right to the right
+	rotate t to the left
