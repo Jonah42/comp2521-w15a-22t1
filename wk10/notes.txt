@@ -1,0 +1,64 @@
+"password123" -> 0x23eb791ad9ff68
+
+"hamburger" -> 2
+"soft serve" -> 1
+
+price["hamburger"] = 2
+
+hash("hamburger") = sum(chars) === 'h'+'a' + ..... =633
+
+price[hash("hamburger")]
+price[633] = 2
+
+
+633 % 10 = 3
+
+price[3] = 2
+
+hash(string) = sum (chars in the string) %10
+
+price[hash("hamburger")] = 2 //price[3]
+price[hash("soft serve")] = 1 //price[0]
+
+[1, _,_,2,_,_,...]
+
+
+"mahburger" -> 12
+
+hash("mahburger") == 3
+
+[1, _,_,12,_,_,...]
+
+How de we resolve??
+
+1. Separate Chaining
+	[<"soft serve" 1>, _,_,<"hamburger" 2>,_,_,...]
+								|
+								v
+						<"mahburger" 12>
+
+2. Linear Probing
+	[<"soft serve" 1>, _,_,<"hamburger" 2>,<"mahburger" 12>,_,...]
+
+3. Double hashing
+	[<"soft serve" 1>, _,_,<"hamburger" 2>,_,_,...]
+
+	hash("mahburger") = 3
+	hash2("mahburger") = 4
+
+	3 + 4 = 7
+
+	[<"soft serve" 1>, "bhamurger",_,<"hamburger" 2>,_,_,_,<"mahburger" 12>...]
+
+	"bhamurger"
+
+	7 + 4 = 11 %10 = 1
+
+
+Hash sets:
+
+insert(12)
+insert(10)
+query()
+
+{12, _, _, 10}
